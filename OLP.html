@@ -263,23 +263,23 @@
   .stat-divider{width:1px; height:32px; background:rgba(255,255,255,.18);}
 
   /* floating verification card */
-  .hero-float-card{
-    position:absolute; right:7%; bottom:38px; z-index:3; width:300px;
-    background:rgba(255,255,255,.94); backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.5); border-radius:14px; padding:20px 22px;
-    box-shadow:0 26px 55px rgba(6,16,26,.4);
+  .hero-dashboard-img {
+    position:absolute; right:-2%; top:50%; transform:translateY(-50%);
+    z-index:3; width:65vw; max-width:850px; min-width:500px;
   }
-  .float-head{display:flex; align-items:center; gap:10px; margin-bottom:9px;}
-  .float-seal{width:28px;height:28px;border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
-  .float-seal svg{width:14px;height:14px;}
-  .float-title{font-family:var(--font-mono); font-size:.78rem; font-weight:600; color:var(--ink); letter-spacing:.02em;}
-  .float-text{margin:0; font-size:.85rem; color:var(--slate); line-height:1.48;}
+  @media(max-width:1100px){
+    .hero-dashboard-img{ right:2%; width:60vw; }
+  }
   @media(max-width:920px){
-    .hero{padding:100px 0 300px;}
-    .hero-float-card{right:50%; transform:translateX(50%); bottom:34px; width:88%; max-width:340px;}
+    .hero{padding:100px 0 450px;}
+    .hero-dashboard-img{
+      right:50%; transform:translateX(50%); top:auto; bottom:20px;
+      width:90%; max-width:650px; min-width:0;
+    }
   }
   @media(max-width:520px){
-    .hero{padding:96px 0 260px;}
+    .hero{padding:96px 0 360px;}
+    .hero-dashboard-img{ bottom: 20px; }
   }
 
   /* ---------- SECTION LABELS ---------- */
@@ -518,7 +518,7 @@
       </div>
     </div>
 
-    <div class="hero-float-card reveal" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+    <div class="hero-dashboard-img reveal">
       <img src="https://simplitrain.com/wp-content/uploads/2026/06/simplitrain-dashboard.webp" style="border-radius: 14px; width: 100%; height: auto; box-shadow: 0 26px 55px rgba(6,16,26,.4);" alt="SimpliTrain Dashboard">
     </div>
   </section>
